@@ -1,0 +1,8 @@
+name: HubPVP
+version: '${version}'
+softdepend:
+  - WorldGuard
+main: com.github.kacperleague9.hubpvp.HubPVP
+api-version: 1.18
+commands:
+  hubpvp:
