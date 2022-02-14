@@ -1,0 +1,69 @@
+inventory:
+  armor:
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_BOOTS
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_LEGGINGS
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_CHESTPLATE
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_HELMET
+  content:
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: APPLE
+      amount: 16
+    - null
+    - null
+    - null
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: DIAMOND_SWORD
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_BOOTS
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_LEGGINGS
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_CHESTPLATE
+    - ==: org.bukkit.inventory.ItemStack
+      v: 2865
+      type: IRON_HELMET
+    - null

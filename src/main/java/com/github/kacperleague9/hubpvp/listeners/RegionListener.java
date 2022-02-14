@@ -23,22 +23,16 @@ public class RegionListener implements Listener {
     @EventHandler
     public void onEnter(RegionEnterEvent event) throws IOException {
         Player player = event.getPlayer();
-        Bukkit.getLogger().info("enter");
         if (list.contains(event.getRegion().getId())) {
-            Bukkit.getLogger().info("enter id ok");
             saveInventory(player);
             player.getInventory().clear();
-            applyKit(player);
+            loadCachedKit(player);
         }
     }
     @EventHandler
-    public void onLeave(RegionLeaveEvent event) throws IOException {
-        Bukkit.getLogger().info("leave");
+    public void onLeave(RegionLeaveEvent event) {
         Player player = event.getPlayer();
-        if (list.contains(event.getRegion().getId())) {
-            Bukkit.getLogger().info("leave id ok");
+        if (list.contains(event.getRegion().getId()))
             restoreInventory(player);
         }
-    }
-
 }

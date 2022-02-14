@@ -7,8 +7,7 @@ import org.bukkit.entity.Player;
 
 import java.io.IOException;
 
-import static com.github.kacperleague9.hubpvp.HubPVP.logger;
-import static com.github.kacperleague9.hubpvp.HubPVP.saveKit;
+import static com.github.kacperleague9.hubpvp.HubPVP.*;
 
 public class CommandRegister implements CommandExecutor {
 
@@ -21,6 +20,7 @@ public class CommandRegister implements CommandExecutor {
                     case "savekit" -> {;
                         try {
                             saveKit(player);
+                            cacheKit();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

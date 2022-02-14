@@ -1,7 +1,8 @@
-name: HubPVP
+name: DynamicPVPArena
 version: '${version}'
-softdepend:
+depend:
   - WorldGuard
+  - WGRegionEvents
 main: com.github.kacperleague9.hubpvp.HubPVP
 api-version: 1.18
 commands:
