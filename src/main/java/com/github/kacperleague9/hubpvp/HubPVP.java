@@ -73,8 +73,8 @@ public final class HubPVP extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         getServer().getPluginManager().registerEvents(new RegionListener(), this);
-        Objects.requireNonNull(this.getCommand("hubpvp")).setExecutor(new CommandRegister());
-        Objects.requireNonNull(this.getCommand("hubpvp")).setTabCompleter(new CommandTabCompleter());
+        Objects.requireNonNull(this.getCommand("dynamicpvparena")).setExecutor(new CommandRegister());
+        Objects.requireNonNull(this.getCommand("dynamicpvparena")).setTabCompleter(new CommandTabCompleter());
         if (!new File(plugin.getDataFolder().getAbsolutePath(), "data.yml").exists()) {
             plugin.saveResource("data.yml", false);
             logger.info("[HUBPVP] Kit not found, using default one.");

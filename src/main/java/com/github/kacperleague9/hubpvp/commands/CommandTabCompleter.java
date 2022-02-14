@@ -10,7 +10,7 @@ import java.util.List;
 public class CommandTabCompleter implements TabCompleter {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("hubpvp")) {
+        if (cmd.getName().equalsIgnoreCase("dynamicpvparena")) {
             List<String> autoCompletes = new ArrayList<>();
                 autoCompletes.add("savekit");
                 return autoCompletes;

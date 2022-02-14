@@ -17,7 +17,7 @@ public class CommandRegister implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 switch (args[0]) {
-                    case "savekit" -> {;
+                    case "dynamicpvparena" -> {;
                         try {
                             saveKit(player);
                             cacheKit();

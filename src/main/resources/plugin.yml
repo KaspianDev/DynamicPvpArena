@@ -4,6 +4,10 @@ depend:
   - WorldGuard
   - WGRegionEvents
 main: com.github.kacperleague9.hubpvp.HubPVP
-api-version: 1.18
+api-version: 1.13
 commands:
-  hubpvp:
+  dynamicpvparena:
+    aliases:
+      - dpa
+      - hubpvp
+    permission: dynamicpvparena.command
