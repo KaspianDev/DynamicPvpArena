@@ -1,5 +1,7 @@
-package com.github.kacperleague9.hubpvp.commands;
+package com.github.kaspiandev.dynamicpvparena.commands;
 
+import com.github.kaspiandev.dynamicpvparena.DynamicPVPArena;
+import de.themoep.minedown.MineDown;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -7,7 +9,8 @@ import org.bukkit.entity.Player;
 
 import java.io.IOException;
 
-import static com.github.kacperleague9.hubpvp.HubPVP.*;
+import static com.github.kaspiandev.dynamicpvparena.DynamicPVPArena.cacheKit;
+import static com.github.kaspiandev.dynamicpvparena.DynamicPVPArena.saveKit;
 
 public class CommandRegister implements CommandExecutor {
 
@@ -17,21 +20,20 @@ public class CommandRegister implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 switch (args[0]) {
-                    case "dynamicpvparena" -> {;
+                    case "savekit" -> {;
                         try {
                             saveKit(player);
                             cacheKit();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        player.sendMessage("[HUBPVP] Kit saved.");
-                            logger.info("kit saved");
+                        player.spigot().sendMessage(new MineDown("[[DynamicPVPArena]](#ff0000-#ed3e3e) [Kit saved](#ffdbdb)").toComponent());
                         }
                     }
                 }
             }
         else {
-            sender.sendMessage("[HUBPVP] Use /hubpvp savekit.");
+            sender.spigot().sendMessage(new MineDown("[[DynamicPVPArena]](#ff0000-#ed3e3e) [Use /dpa savekit](#ffdbdb))").toComponent());
         }
         return false;
     }

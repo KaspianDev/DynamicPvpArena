@@ -1,8 +1,9 @@
-package com.github.kacperleague9.hubpvp;
+package com.github.kaspiandev.dynamicpvparena;
 
-import com.github.kacperleague9.hubpvp.commands.CommandRegister;
-import com.github.kacperleague9.hubpvp.commands.CommandTabCompleter;
-import com.github.kacperleague9.hubpvp.listeners.RegionListener;
+import com.github.kaspiandev.dynamicpvparena.commands.CommandRegister;
+import com.github.kaspiandev.dynamicpvparena.commands.CommandTabCompleter;
+import com.github.kaspiandev.dynamicpvparena.listeners.RegionListener;
+import de.themoep.minedown.MineDown;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,12 +15,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
-import java.util.logging.Logger;
 
-public final class HubPVP extends JavaPlugin {
+public final class DynamicPVPArena extends JavaPlugin {
 
-    public static HubPVP plugin;
-    public static Logger logger = Bukkit.getLogger();
+    public static DynamicPVPArena plugin;
     public static ItemStack[] cachedKitArmor;
     public static ItemStack[] cachedKitInventory;
     public static File dataFile;
@@ -77,18 +76,18 @@ public final class HubPVP extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("dynamicpvparena")).setTabCompleter(new CommandTabCompleter());
         if (!new File(plugin.getDataFolder().getAbsolutePath(), "data.yml").exists()) {
             plugin.saveResource("data.yml", false);
-            logger.info("[HUBPVP] Kit not found, using default one.");
+            Bukkit.getConsoleSender().spigot().sendMessage(new MineDown("[[DynamicPVPArena]](#ff0000-#ed3e3e) [Kit not found, using default one](#ffdbdb)").toComponent());
         }
         plugin.saveDefaultConfig();
         dataFile = new File(plugin.getDataFolder().getAbsolutePath(), "data.yml");
         cacheKit();
-        logger.info("[HUBPVP] Loaded.");
+		Bukkit.getConsoleSender().spigot().sendMessage(new MineDown("[[DynamicPVPArena]](#ff0000-#ed3e3e) [Loaded :)](#ffdbdb)").toComponent());
     }
 
     @Override
     public void onDisable() {
         plugin.saveConfig();
-        logger.info("[HUBPVP] Disabled.");
+        Bukkit.getConsoleSender().spigot().sendMessage(new MineDown("[[DynamicPVPArena]](#ff0000-#ed3e3e) [Disabled](#ffdbdb)").toComponent());
     }
 
 }

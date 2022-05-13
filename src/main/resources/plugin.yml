@@ -3,7 +3,7 @@ version: '${version}'
 depend:
   - WorldGuard
   - WGRegionEvents
-main: com.github.kacperleague9.hubpvp.HubPVP
+main: com.github.kaspiandev.dynamicpvparena.DynamicPVPArena
 api-version: 1.13
 commands:
   dynamicpvparena:

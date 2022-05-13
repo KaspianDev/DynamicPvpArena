@@ -1,4 +1,4 @@
-package com.github.kacperleague9.hubpvp.commands;
+package com.github.kaspiandev.dynamicpvparena.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
