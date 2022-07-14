@@ -116,3 +116,7 @@ run/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+.vscode/settings.json
+bin/main/config.yml
+bin/main/data.yml
+bin/main/plugin.yml
