@@ -20,7 +20,7 @@ public class CommandRegister implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 switch (args[0]) {
-                    case "savekit" -> {;
+                    case "savekit" -> {
                         try {
                             saveKit(player);
                             cacheKit();
